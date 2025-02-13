@@ -71,39 +71,39 @@ function perlinNoise4d(w, x = 0, y = 0, z = 0) {
   let z1 = z0 - 1;
   zw &= 255;
 
-  let r0 = p[ww] + xw;
-  let r1 = p[ww + 1] + xw;
+  let r0 = perm[ww] + xw;
+  let r1 = perm[ww + 1] + xw;
 
-  let r00 = p[r0] + yw;
-  let r10 = p[r1] + yw;
-  let r01 = p[r0 + 1] + yw;
-  let r11 = p[r1 + 1] + yw;
+  let r00 = perm[r0] + yw;
+  let r10 = perm[r1] + yw;
+  let r01 = perm[r0 + 1] + yw;
+  let r11 = perm[r1 + 1] + yw;
 
-  let r000 = p[r00] + zw;
-  let r100 = p[r10] + zw;
-  let r010 = p[r01] + zw;
-  let r110 = p[r11] + zw;
-  let r001 = p[r00 + 1] + zw;
-  let r101 = p[r10 + 1] + zw;
-  let r011 = p[r01 + 1] + zw;
-  let r111 = p[r11 + 1] + zw;
+  let r000 = perm[r00] + zw;
+  let r100 = perm[r10] + zw;
+  let r010 = perm[r01] + zw;
+  let r110 = perm[r11] + zw;
+  let r001 = perm[r00 + 1] + zw;
+  let r101 = perm[r10 + 1] + zw;
+  let r011 = perm[r01 + 1] + zw;
+  let r111 = perm[r11 + 1] + zw;
 
-  let a = p[r000];
-  let b = p[r100];
-  let c = p[r010];
-  let d = p[r110];
-  let e = p[r001];
-  let f = p[r101];
-  let g = p[r011];
-  let h = p[r111];
-  let i = p[r000 + 1];
-  let j = p[r100 + 1];
-  let k = p[r010 + 1];
-  let l = p[r110 + 1];
-  let m = p[r001 + 1];
-  let n = p[r101 + 1];
-  let o = p[r011 + 1];
-  let p = p[r111 + 1];
+  let a = perm[r000];
+  let b = perm[r100];
+  let c = perm[r010];
+  let d = perm[r110];
+  let e = perm[r001];
+  let f = perm[r101];
+  let g = perm[r011];
+  let h = perm[r111];
+  let i = perm[r000 + 1];
+  let j = perm[r100 + 1];
+  let k = perm[r010 + 1];
+  let l = perm[r110 + 1];
+  let m = perm[r001 + 1];
+  let n = perm[r101 + 1];
+  let o = perm[r011 + 1];
+  let p = perm[r111 + 1];
 
   //prettier-ignore
   {
